@@ -1,0 +1,25 @@
+<!--pages/posts/posts.wxml-->
+<view>
+   <swiper indicator-dots='true' autoplay='true' interval='2000'>
+    <swiper-item><image src='/images/banner3.jpg' ></image></swiper-item>
+    <swiper-item><image src='/images/banner4.jpg'></image></swiper-item>
+    <swiper-item><image src='/images/banner5.jpg'></image></swiper-item>
+  </swiper> 
+  <view class='post-container'>
+    <view class='post-author-date'>
+      <image class='post-author' src='/images/avatar.jpg'></image>
+      <text class='post-date'>Nov 25 2017</text>
+    </view>
+    <text class='post-title'>正是虾肥蟹壮时</text>
+    <image class='post-image' src='/images/banner1.jpg'></image>
+    <text class='post-content'>蒹葭苍苍，白露为霜。所谓伊人，在水一方。溯洄从之，道阻且长。溯游从之，宛在水中央。</text>
+    <view class='post-like'>
+      <image class='post-like-image' src='../../images/icon/favor.png'></image>
+      <text class='post-like-font'>37</text>
+      <image class='post-like-image' src='../../images/icon/watch.png'></image>
+      <text class='post-like-font'>73</text>
+    </view>
+  </view>
+
+    
+</view>
