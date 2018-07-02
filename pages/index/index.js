@@ -50,5 +50,15 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  onContainerTap: function () {
+    wx.redirectTo({
+      url: '../posts/posts',
+    })
+  },
+  onSubTap:function (){
+
   }
+
 })

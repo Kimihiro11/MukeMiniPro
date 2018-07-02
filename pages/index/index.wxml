@@ -7,7 +7,7 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="moto-container" bindtap='onContainerTap'>
+    <text class='moto' bindtap='onSubTap'>开启小程序之路</text>
   </view>
 </view>

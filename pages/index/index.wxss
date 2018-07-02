@@ -16,6 +16,19 @@
   color: #aaa;
 }
 
-.usermotto {
+.moto-container {
   margin-top: 200px;
+  border: 1px solid #405f80;
+  height: 80rpx;
+  width: 200rpx;
+  
+  text-align: center;
+}
+
+.moto{
+   
+  line-height: 40px;
+  font-size: 22rpx;
+  font-family: Microsoft Yahei;
+  font-weight: bold;
 }
