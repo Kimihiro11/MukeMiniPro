@@ -27,7 +27,7 @@
 
 .moto{
    
-  line-height: 40px;
+  line-height: 50rpx;
   font-size: 22rpx;
   font-family: Microsoft Yahei;
   font-weight: bold;

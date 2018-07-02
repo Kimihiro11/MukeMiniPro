@@ -1,0 +1,19 @@
+<!--pages/posts/post-detail/post-detail.wxml-->
+<view class='container'>
+  <image class='head-image' src='/images/post/1.png'></image>
+  <view class='author-date'>
+    <image class='avatar' src='/images/avatar.jpg'></image>
+    <text class='author'>十一</text>
+    <text class='const-text'>发表于</text>
+    <text class='date'>三天前</text>
+  </view>
+  <text class='title'>你还想我吗</text>
+  <view class='tool'>
+    <view class='circle-img'>
+      <image src='/images/icon/collections.png'></image>
+      <image class='share-img' src='/images/icon/share.png'></image>
+    </view>
+    <view class='horizon'></view>
+  </view>
+  <text class='detail'>当然我便不再想你了</text>
+</view>
