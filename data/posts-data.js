@@ -10,7 +10,12 @@ var local_database = [{
     author:"十一",
     datetime:"24小时前",
     detail:"增之一分则太长，减之一分则太短。著粉则太白，施朱则太赤。",
-    postId:0
+    postId:0,
+    music:{
+      src: 'http://ws.stream.qqmusic.qq.com/C100001Bbv083BhcyW.m4a?fromtag=46', 
+      title : '时间',
+      coverImgUrl : 'https://p.qpic.cn/music_cover/ibSiagqKjw1zfTgxY7F8CfE8ok7mgM0g5hwL3lsz7zAMbJItwpKz2PGQ/300?n=1'
+    }
   }, {
     date: "Nov 25 2017",
     title: "正是虾肥蟹壮时",
@@ -23,7 +28,12 @@ var local_database = [{
     author: "十一",
     datetime: "24小时前",
     detail: "增之一分则太长，减之一分则太短。著粉则太白，施朱则太赤。",
-    postId: 1
+    postId: 1,
+    music: {
+      src: 'http://ws.stream.qqmusic.qq.com/C100001Bbv083BhcyW.m4a?fromtag=46',
+      title: '时间',
+      coverImgUrl: 'https://p.qpic.cn/music_cover/ibSiagqKjw1zfTgxY7F8CfE8ok7mgM0g5hwL3lsz7zAMbJItwpKz2PGQ/300?n=1'
+    }
   }, {
     date: "Nov 25 2017",
     title: "正是虾肥蟹壮时",
@@ -36,7 +46,12 @@ var local_database = [{
     author: "十一",
     datetime: "24小时前",
     detail: "增之一分则太长，减之一分则太短。著粉则太白，施朱则太赤。",
-    postId: 2
+    postId: 2,
+    music: {
+      src: 'http://ws.stream.qqmusic.qq.com/C100001Bbv083BhcyW.m4a?fromtag=46',
+      title: '时间',
+      coverImgUrl: 'https://p.qpic.cn/music_cover/ibSiagqKjw1zfTgxY7F8CfE8ok7mgM0g5hwL3lsz7zAMbJItwpKz2PGQ/300?n=1'
+    }
   }, {
     date: "Nov 25 2017",
     title: "正是虾肥蟹壮时",
@@ -49,7 +64,12 @@ var local_database = [{
     author: "十一",
     datetime: "24小时前",
     detail: "增之一分则太长，减之一分则太短。著粉则太白，施朱则太赤。",
-    postId: 3
+    postId: 3,
+    music: {
+      src: 'http://ws.stream.qqmusic.qq.com/C100001Bbv083BhcyW.m4a?fromtag=46',
+      title: '时间',
+      coverImgUrl: 'https://p.qpic.cn/music_cover/ibSiagqKjw1zfTgxY7F8CfE8ok7mgM0g5hwL3lsz7zAMbJItwpKz2PGQ/300?n=1'
+    }
   }, {
     date: "Nov 25 2017",
     title: "正是虾肥蟹壮时",
@@ -62,7 +82,12 @@ var local_database = [{
     author: "十一",
     datetime: "24小时前",
     detail: "增之一分则太长，减之一分则太短。著粉则太白，施朱则太赤。",
-    postId: 4
+    postId: 4,
+    music: {
+      src: 'http://ws.stream.qqmusic.qq.com/C100001Bbv083BhcyW.m4a?fromtag=46',
+      title: '时间',
+      coverImgUrl: 'https://p.qpic.cn/music_cover/ibSiagqKjw1zfTgxY7F8CfE8ok7mgM0g5hwL3lsz7zAMbJItwpKz2PGQ/300?n=1'
+    }
   }
 
 ]
