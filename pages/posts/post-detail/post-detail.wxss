@@ -1,4 +1,11 @@
 /* pages/posts/post-detail/post-detail.wxss */
+.container1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+ 
+} 
+
 .head-image{
   width: 100%;
   height: 460rpx;
@@ -72,7 +79,7 @@
   background-color: #e5e5e5;
   vertical-align: middle;
   position: relative;
-  top: 46rpx;
+  top: 45rpx;
   margin: 0 auto;
   z-index: -99;
 }
@@ -84,3 +91,12 @@
   letter-spacing: 2px;
   
 }
+ .audio{
+   width: 102rpx;
+   height: 102rpx;
+   position: absolute;
+   left: 50%;
+   margin-left: -51rpx;
+   top: 180rpx;
+   opacity: 0.6;
+ }
