@@ -1,6 +1,6 @@
 // pages/posts/post-detail/post-detail.js
 var postsData = require('../../../data/posts-data.js')
-
+var app = getApp();
 Page({
 
   /**
@@ -14,9 +14,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    var globalData = app.globalData;
     var postId = options.id;
+    var that = this;
     //console.log(postId)
     //console.log(postsData)
+
     this.data.currentPostId = postId;
     var postData = postsData.postsList[postId];
     this.setData({
@@ -35,17 +38,30 @@ Page({
       postsCollected[postId] = false;
       wx.setStorageSync('posts_Collected', postsCollected);
     }
+
+    if (globalData.g_isPlayingMusic && globalData.g_currentMusicPostId === postId){
+      that.setData({
+        isPlayingMusic: true
+      });
+    }
+
     const backgroundAudioManager = wx.getBackgroundAudioManager();
-    var that = this;
+   
     backgroundAudioManager.onPlay(function () {
       that.setData({
         isPlayingMusic: true
-      })
+      });
+      globalData.g_isPlayingMusic = true;
+      globalData.g_currentMusicPostId = that.data.currentPostId;
     });
     backgroundAudioManager.onPause(function(){
       that.setData({
         isPlayingMusic: false
-      })
+      });
+      globalData.g_isPlayingMusic = false;
+      globalData.g_currentMusicPostId = null;
+
+
     });
     // wx.onBackgroundAudioPlay(function(){
     //   that.setData({
