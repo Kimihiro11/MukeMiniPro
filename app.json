@@ -13,21 +13,20 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "borderStyle":"white",
+    "borderStyle": "white",
     "list": [
       {
-      "pagePath": "pages/posts/posts",
-      "text": "文章",
-      "iconPath":"/images/icon/read.png",
-      "selectedIconPath":"/images/icon/readed.png"
-    },
-    {
-      "pagePath": "pages/movies/movies",
-      "text": "电影",
-      "iconPath": "/images/icon/movie.png",
-      "selectedIconPath": "/images/icon/movied.png"      
-    }
-    
+        "pagePath": "pages/posts/posts",
+        "text": "文章",
+        "iconPath": "/images/icon/read.png",
+        "selectedIconPath": "/images/icon/readed.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "/images/icon/movie.png",
+        "selectedIconPath": "/images/icon/movied.png"
+      }
     ]
   }
 }
