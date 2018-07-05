@@ -1,12 +1,13 @@
 <!--pages/movies/star/star-template.wxml-->
-<template name='starTemplate'>
-  <view>
-    <image src='/images/icon/stared.png'></image>
-    <image src='/images/icon/stared.png'></image>
-    <image src='/images/icon/stared.png'></image>
-    <image src='/images/icon/stared.png'></image>
-    <image src='/images/icon/stared.png'></image>
-    <text></text>
-
+<template name='starsTemplate'>
+  <view class='stars-container'>
+    <view class='stars'>
+      <image src='/images/icon/stared.png'></image>
+      <image src='/images/icon/stared.png'></image>
+      <image src='/images/icon/stared.png'></image>
+      <image src='/images/icon/stared.png'></image>
+      <image src='/images/icon/stared.png'></image>
+    </view>
+    <text class='stars-score'>sss</text>
   </view>
 </template>
