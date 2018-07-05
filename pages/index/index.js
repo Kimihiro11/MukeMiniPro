@@ -53,7 +53,7 @@ Page({
   },
 
   onContainerTap: function () {
-    wx.redirectTo({
+    wx.switchTab({
       url: '../posts/posts',
     })
   },
