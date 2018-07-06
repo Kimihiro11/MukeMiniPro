@@ -1,4 +1,6 @@
 // pages/movies/movies.js
+
+const app = getApp()
 Page({
 
   /**
@@ -12,7 +14,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var douApi = app.globalData.g_doubanBase;
+    var douApiNums = "?start0&count=3";
+    var inTheaterUrl = douApi + '/v2/movie/in_theaters' + douApiNums;
+    var comingSoonUrl = douApi + '/v2/movie/coming_soon' + douApiNums;
+    var top250Url = douApi + '/v2/movie/top250' + douApiNums;
+
+    this.getMovieListData(inTheaterUrl);
+  },
+
+  getMovieListData:function(url){
+    wx.request({
+      url: url,
+      data: {},
+      method: 'GET',
+      header: {
+        'content-Type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res);
+      }
+    })
   },
 
   /**

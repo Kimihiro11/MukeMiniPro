@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
 	"appid": "wx605af99fc458c5c5",
-	"projectname": "muke",
+	"projectname": "mukemini",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
