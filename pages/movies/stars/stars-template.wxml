@@ -2,12 +2,12 @@
 <template name='starsTemplate'>
   <view class='stars-container'>
     <view class='stars'>
-      <image src='/images/icon/stared.png'></image>
-      <image src='/images/icon/stared.png'></image>
-      <image src='/images/icon/stared.png'></image>
-      <image src='/images/icon/stared.png'></image>
-      <image src='/images/icon/stared.png'></image>
+    <block wx:for='{{stars}}' wx:for-item='i' wx:key='key'>
+      <image wx:if='{{i}}' src='/images/icon/stared.png'></image>
+      <image wx:else src='/images/icon/star.png'></image>
+    </block>
+   
     </view>
-    <text class='stars-score'>sss</text>
+    <text class='stars-score'>{{score}}</text>
   </view>
 </template>
