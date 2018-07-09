@@ -9,7 +9,11 @@ Page({
   data: {
     inTheaters:{},
     comingSoon:{},
-    top250:{}
+    top250:{},
+    searchResult:{},
+    containerShow:true,
+    searchPanelShow:false
+
   },
 
   /**
@@ -43,6 +47,27 @@ Page({
       }
     })
   }, 
+
+  onCancelImgTap:function(event){
+    this.setData({
+      containerShow: true,
+      searchPanelShow: false,
+      searchResult:{}
+    })
+  },
+
+  onBindFocus:function(event){
+    this.setData({
+      containerShow: false,
+      searchPanelShow: true
+    })
+  },
+  onBindChange:function(event){
+    var text = event.detail.value;
+    var searchUrl = app.globalData.g_doubanBase + '/v2/movie/search?q=' + text;
+    //console.log(searchUrl);
+    this.getMovieListData(searchUrl, 'searchResult', '')
+  },
 
   processDoubanData:function(moviesDouban, settedKey, categoryTitle){
     var movies = [];

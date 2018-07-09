@@ -8,7 +8,10 @@ Page({
    */
   data: {
     navigateTitle:'',
-    movies:{}
+    movies:{},
+    requestUrl:'',
+    totalCount: 0,
+    isEmpty:true
   },
 
   /**
@@ -16,6 +19,7 @@ Page({
    */
   onLoad: function (options) {
     var category = options.category;
+    console.log(category)
     this.data.navigateTitle = category;
     var douApi = app.globalData.g_doubanBase;
     var dataUrl = '';
@@ -26,15 +30,37 @@ Page({
       case '即将上映':
         dataUrl = douApi + '/v2/movie/coming_soon';
         break;
-      case 'top250':
+      case 'Top250':
         dataUrl = douApi + '/v2/movie/top250';
         break;
 
     }
+    this.data.requestUrl = dataUrl;
     util.httpGet(dataUrl, this.processDoubanData);
   },
 
-  processDoubanData: function (moviesDouban,) {
+  onScrollLower: function (event) {
+    var nextUrl = this.data.requestUrl + '?start=' + this.data.totalCount +'&count=20';
+    util.httpGet(nextUrl, this.processDoubanData);
+    wx.showNavigationBarLoading();
+  },
+
+  onPullDownRefresh:function(event){
+    var refreshUrl = this.data.requestUrl +'?start=0&count=20';
+    this.data.movies = {};
+    this.data.isEmpty = true;
+    util.httpGet(refreshUrl,this.processDoubanData);
+    wx.showNavigationBarLoading();
+  },
+
+  // onReachBottom: function (event) {
+  //   var nextUrl = this.data.requestUrl +
+  //     "?start=" + this.data.totalCount + "&count=20";
+  //   util.http(nextUrl, this.processDoubanData)
+  //   wx.showNavigationBarLoading()
+  // },
+
+  processDoubanData: function (moviesDouban) {
     var movies = [];
     //console.log(moviesDouban.subjects);
     for (var idx in moviesDouban.subjects) {
@@ -52,10 +78,22 @@ Page({
       }
       movies.push(temp);
     }
+    var totalMovies = {};
    
+    if(!this.data.isEmpty){
+      totalMovies = this.data.movies.concat(movies);
+    }
+    else{
+      totalMovies = movies;
+      this.data.isEmpty = false;
+    }
     this.setData({
-      movies:movies
+      movies:totalMovies
       });
+
+    this.data.totalCount += 20;
+    wx.hideNavigationBarLoading();
+    wx.stopPullDownRefresh();
   },
 
 
@@ -112,4 +150,6 @@ Page({
   onShareAppMessage: function () {
   
   }
+
+ 
 })
