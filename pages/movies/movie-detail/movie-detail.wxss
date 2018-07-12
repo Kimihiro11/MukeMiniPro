@@ -1,0 +1,9 @@
+/* pages/movies/movie-detail/movie-detail.wxss */
+.de-container{
+  display: felx;
+  flex-direction: column;
+}
+
+head-img{
+  
+}

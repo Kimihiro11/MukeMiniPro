@@ -60,8 +60,13 @@ Page({
       });
       globalData.g_isPlayingMusic = false;
       globalData.g_currentMusicPostId = null;
-
-
+    });
+    backgroundAudioManager.onStop(function(){
+      that.setData({
+        isPlayingMusic: false
+      });
+      globalData.g_isPlayingMusic = false;
+      globalData.g_currentMusicPostId = null;
     });
     // wx.onBackgroundAudioPlay(function(){
     //   that.setData({
