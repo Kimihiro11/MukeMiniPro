@@ -21,3 +21,10 @@
 .stars-score{
   color: #1f3463;
 }
+
+.summary{
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  color:#777;
+}
+

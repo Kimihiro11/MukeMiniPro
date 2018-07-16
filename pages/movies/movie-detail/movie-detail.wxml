@@ -1,8 +1,8 @@
 <import src='../stars/stars-template.wxml' />
 
   <view class='de-container'>
-    <image class='head-img' src='{{movie.movieImg}}' mode='aspectFill'></image>
-    <view class='head-img-hover'>
+    <image class='head-img' src='{{movie.movieImg}}' mode='aspectFill' ></image>
+    <view class='head-img-hover' data-src='{{movie.movieImg}}' catchtap='viewMoviePostImg'>
       <text class='main-title'>{{movie.title}}</text>
       <text class='sub-title'>{{movie.country + "·" + movie.year}}</text>
       <view class='like'>
@@ -38,12 +38,12 @@
     </view>
     <view class='hr'></view>
     <view class='synopsis'>
-      <text style='color:#999'>剧情简介</text>
+      <text class='synopsis-font'>剧情简介</text>
       <text class='summary-content'>{{movie.summary}}</text>
     </view>
     <view class='hr'></view>
     <view class='cast'>
-      <text>影人</text>
+      <text class='cast-font'>影人</text>
       <scroll-view class='cast-imgs' scroll-x='true' style='width:100%'>
         <block wx:for='{{movie.castsInfo}}' wx:for-item='item' wx:key='key' > 
           <view class='cast-container'>

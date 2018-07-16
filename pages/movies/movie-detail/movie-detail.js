@@ -104,5 +104,16 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  viewMoviePostImg:function(e){
+    var src = e.currentTarget.dataset.src;
+    wx.previewImage({
+      current: src,
+
+      urls: [src],
+    })
   }
+
+
 })
